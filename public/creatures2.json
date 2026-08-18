@@ -1,0 +1,871 @@
+[
+  {
+    "name": "Goblin",
+    "hp": 12,
+    "ac": 13,
+    "mov": 6,
+    "stats": {
+      "str": 8,
+      "strMod": -1,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 10,
+      "conMod": 0,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Adaga",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Espada Curta",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Orc",
+    "hp": 24,
+    "ac": 13,
+    "mov": 6,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 15,
+      "conMod": 2,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 9,
+      "wizMod": -1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Machado de Guerra",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Machado Pesado",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Esqueleto",
+    "hp": 16,
+    "ac": 14,
+    "mov": 6,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 10,
+      "conMod": 0,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 5,
+      "chaMod": -3
+    },
+    "weapons": [
+      {
+        "name": "Espada Enferrujada",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Arco Antigo",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Lobisomem",
+    "hp": 42,
+    "ac": 15,
+    "mov": 8,
+    "stats": {
+      "str": 17,
+      "strMod": 3,
+      "dex": 15,
+      "dexMod": 2,
+      "con": 16,
+      "conMod": 3,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 11,
+      "wizMod": 0,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Ferida Profunda",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+
+  {
+    "name": "Minotauro",
+    "hp": 55,
+    "ac": 14,
+    "mov": 7,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 11,
+      "dexMod": 0,
+      "con": 18,
+      "conMod": 4,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Machado Duplo",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Chifres",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Investida",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+
+  {
+    "name": "Medusa",
+    "hp": 35,
+    "ac": 15,
+    "mov": 6,
+    "stats": {
+      "str": 12,
+      "strMod": 1,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 12,
+      "conMod": 1,
+      "int": 15,
+      "intMod": 2,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Adaga",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Serpentes",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Ciclope",
+    "hp": 70,
+    "ac": 13,
+    "mov": 7,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 20,
+      "conMod": 5,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Clava Gigante",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Pedra",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Hidra",
+    "hp": 90,
+    "ac": 16,
+    "mov": 5,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 20,
+      "conMod": 5,
+      "int": 4,
+      "intMod": -3,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 5,
+      "chaMod": -3
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Cauda",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Centauro",
+    "hp": 38,
+    "ac": 14,
+    "mov": 10,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 14,
+      "conMod": 2,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Lança",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Arco",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Coice",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Grifo",
+    "hp": 48,
+    "ac": 15,
+    "mov": 10,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 15,
+      "dexMod": 2,
+      "con": 16,
+      "conMod": 3,
+      "int": 5,
+      "intMod": -3,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Bico",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Quimera",
+    "hp": 65,
+    "ac": 16,
+    "mov": 7,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 18,
+      "conMod": 4,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Cauda de Serpente",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+
+  {
+    "name": "Vampiro",
+    "hp": 58,
+    "ac": 17,
+    "mov": 8,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 16,
+      "conMod": 3,
+      "int": 17,
+      "intMod": 3,
+      "wiz": 15,
+      "wizMod": 2,
+      "cha": 20,
+      "chaMod": 5
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Drenar Sangue",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+
+  {
+    "name": "Dragão Jovem",
+    "hp": 110,
+    "ac": 18,
+    "mov": 8,
+    "stats": {
+      "str": 21,
+      "strMod": 5,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 19,
+      "conMod": 4,
+      "int": 14,
+      "intMod": 2,
+      "wiz": 13,
+      "wizMod": 1,
+      "cha": 17,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Chamas",
+          "dice": 6,
+          "multiplier": 2
+        }
+      },
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Cauda",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Troll",
+    "hp": 75,
+    "ac": 15,
+    "mov": 6,
+    "stats": {
+      "str": 19,
+      "strMod": 4,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 20,
+      "conMod": 5,
+      "int": 7,
+      "intMod": -2,
+      "wiz": 9,
+      "wizMod": -1,
+      "cha": 7,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Golem de Pedra",
+    "hp": 100,
+    "ac": 17,
+    "mov": 4,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 5,
+      "dexMod": -3,
+      "con": 20,
+      "conMod": 5,
+      "int": 3,
+      "intMod": -4,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 3,
+      "chaMod": -4
+    },
+    "weapons": [
+      {
+        "name": "Punho de Pedra",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Dois Punhos",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Kraken",
+    "hp": 130,
+    "ac": 17,
+    "mov": 6,
+    "stats": {
+      "str": 24,
+      "strMod": 7,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 22,
+      "conMod": 6,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 15,
+      "wizMod": 2,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Tentáculo",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Valquíria",
+    "hp": 60,
+    "ac": 18,
+    "mov": 9,
+    "stats": {
+      "str": 17,
+      "strMod": 3,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 15,
+      "conMod": 2,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 15,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Lança Celestial",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Raio",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Espada",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Draugr",
+    "hp": 48,
+    "ac": 16,
+    "mov": 5,
+    "stats": {
+      "str": 17,
+      "strMod": 3,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 17,
+      "conMod": 3,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Machado Nórdico",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Punho Morto",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Jotunn",
+    "hp": 120,
+    "ac": 16,
+    "mov": 6,
+    "stats": {
+      "str": 25,
+      "strMod": 7,
+      "dex": 9,
+      "dexMod": -1,
+      "con": 23,
+      "conMod": 6,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 13,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Machado Gigante",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Punho",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Basilisco",
+    "hp": 52,
+    "ac": 15,
+    "mov": 5,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 18,
+      "conMod": 4,
+      "int": 3,
+      "intMod": -4,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 5,
+      "chaMod": -3
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Veneno",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cauda",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Harpy",
+    "hp": 28,
+    "ac": 13,
+    "mov": 9,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 17,
+      "dexMod": 3,
+      "con": 11,
+      "conMod": 0,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Bico",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      }
+    ]
+  },
+
+  {
+    "name": "Manticora",
+    "hp": 68,
+    "ac": 16,
+    "mov": 7,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 17,
+      "conMod": 3,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 9,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Espinhos",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": null
+      }
+    ]
+  }
+]

@@ -1,22 +1,22 @@
 [
   {
     "name": "Goblin",
-    "hp": 12,
-    "ac": 13,
-    "mov": 6,
+    "hp": 18,
+    "ac": 12,
+    "mov": 30,
     "stats": {
-      "str": 8,
-      "strMod": -1,
+      "str": 10,
+      "strMod": 0,
       "dex": 14,
       "dexMod": 2,
       "con": 10,
       "conMod": 0,
-      "int": 10,
-      "intMod": 0,
+      "int": 8,
+      "intMod": -1,
       "wiz": 8,
       "wizMod": -1,
-      "cha": 8,
-      "chaMod": -1
+      "cha": 10,
+      "chaMod": 0
     },
     "weapons": [
       {
@@ -25,9 +25,67 @@
         "multiplier": 1,
         "stat": "dex",
         "extra": null
-      },
+      }
+    ]
+  },
+  {
+    "name": "Goblin Warrior",
+    "hp": 28,
+    "ac": 14,
+    "mov": 30,
+    "stats": {
+      "str": 14,
+      "strMod": 2,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 12,
+      "conMod": 1,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
       {
         "name": "Espada Curta",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Escudo",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Goblin Archer",
+    "hp": 20,
+    "ac": 13,
+    "mov": 30,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 10,
+      "conMod": 0,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Arco Curto",
         "dice": 6,
         "multiplier": 1,
         "stat": "dex",
@@ -35,49 +93,305 @@
       }
     ]
   },
-
   {
-    "name": "Orc",
+    "name": "Goblin Shaman",
     "hp": 24,
-    "ac": 13,
-    "mov": 6,
+    "ac": 12,
+    "mov": 30,
     "stats": {
-      "str": 16,
-      "strMod": 3,
-      "dex": 10,
-      "dexMod": 0,
-      "con": 15,
-      "conMod": 2,
-      "int": 8,
-      "intMod": -1,
-      "wiz": 9,
-      "wizMod": -1,
-      "cha": 10,
-      "chaMod": 0
+      "str": 8,
+      "strMod": -1,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 12,
+      "conMod": 1,
+      "int": 14,
+      "intMod": 2,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 12,
+      "chaMod": 1
     },
     "weapons": [
       {
-        "name": "Machado de Guerra",
+        "name": "Cajado",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Raio Sombrio",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "wiz",
+        "extra": {
+          "name": "Maldição",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Goblin Assassin",
+    "hp": 26,
+    "ac": 15,
+    "mov": 35,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 12,
+      "conMod": 1,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Lâmina Envenenada",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Goblin Chief",
+    "hp": 45,
+    "ac": 16,
+    "mov": 30,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 16,
+      "conMod": 3,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Machado",
         "dice": 8,
         "multiplier": 1,
         "stat": "str",
         "extra": null
       },
       {
-        "name": "Machado Pesado",
-        "dice": 10,
+        "name": "Golpe Brutal",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hobgoblin",
+    "hp": 32,
+    "ac": 16,
+    "mov": 30,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 14,
+      "conMod": 2,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Espada Longa",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Lança",
+        "dice": 6,
         "multiplier": 1,
         "stat": "str",
         "extra": null
       }
     ]
   },
-
   {
-    "name": "Esqueleto",
-    "hp": 16,
+    "name": "Bugbear",
+    "hp": 45,
+    "ac": 16,
+    "mov": 30,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 16,
+      "conMod": 3,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Maça Pesada",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Orc",
+    "hp": 38,
+    "ac": 13,
+    "mov": 30,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 16,
+      "conMod": 3,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Machado",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Orc Berserker",
+    "hp": 58,
     "ac": 14,
-    "mov": 6,
+    "mov": 35,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 18,
+      "conMod": 4,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Machado Duplo",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orc Warlord",
+    "hp": 85,
+    "ac": 18,
+    "mov": 30,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 20,
+      "conMod": 5,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Espada de Guerra",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Golpe Demolidor",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Atordoamento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Skeleton",
+    "hp": 20,
+    "ac": 13,
+    "mov": 30,
     "stats": {
       "str": 10,
       "strMod": 0,
@@ -94,14 +408,65 @@
     },
     "weapons": [
       {
-        "name": "Espada Enferrujada",
+        "name": "Espada Curta",
         "dice": 6,
         "multiplier": 1,
         "stat": "str",
         "extra": null
-      },
+      }
+    ]
+  },
+  {
+    "name": "Skeleton Warrior",
+    "hp": 34,
+    "ac": 15,
+    "mov": 30,
+    "stats": {
+      "str": 14,
+      "strMod": 2,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 12,
+      "conMod": 1,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
       {
-        "name": "Arco Antigo",
+        "name": "Espada Longa",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Skeleton Archer",
+    "hp": 22,
+    "ac": 14,
+    "mov": 30,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 10,
+      "conMod": 0,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Arco",
         "dice": 6,
         "multiplier": 1,
         "stat": "dex",
@@ -109,25 +474,774 @@
       }
     ]
   },
-
   {
-    "name": "Lobisomem",
-    "hp": 42,
-    "ac": 15,
-    "mov": 8,
+    "name": "Skeleton Mage",
+    "hp": 30,
+    "ac": 12,
+    "mov": 30,
     "stats": {
-      "str": 17,
+      "str": 8,
+      "strMod": -1,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 12,
+      "conMod": 1,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Raio Gélido",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "wiz",
+        "extra": {
+          "name": "Congelamento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Skeleton Knight",
+    "hp": 62,
+    "ac": 18,
+    "mov": 30,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 18,
+      "conMod": 4,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Espada Negra",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Skeleton Champion",
+    "hp": 90,
+    "ac": 19,
+    "mov": 35,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 20,
+      "conMod": 5,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Montante",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zombie",
+    "hp": 28,
+    "ac": 8,
+    "mov": 20,
+    "stats": {
+      "str": 14,
+      "strMod": 2,
+      "dex": 6,
+      "dexMod": -2,
+      "con": 16,
+      "conMod": 3,
+      "int": 3,
+      "intMod": -4,
+      "wiz": 6,
+      "wizMod": -2,
+      "cha": 3,
+      "chaMod": -4
+    },
+    "weapons": [
+      {
+        "name": "Pancada",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Zombie Brute",
+    "hp": 60,
+    "ac": 10,
+    "mov": 20,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 6,
+      "dexMod": -2,
+      "con": 20,
+      "conMod": 5,
+      "int": 3,
+      "intMod": -4,
+      "wiz": 6,
+      "wizMod": -2,
+      "cha": 3,
+      "chaMod": -4
+    },
+    "weapons": [
+      {
+        "name": "Esmagamento",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Atordoamento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ghoul",
+    "hp": 30,
+    "ac": 12,
+    "mov": 30,
+    "stats": {
+      "str": 14,
+      "strMod": 2,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 12,
+      "conMod": 1,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Paralisia",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Wight",
+    "hp": 45,
+    "ac": 14,
+    "mov": 30,
+    "stats": {
+      "str": 16,
       "strMod": 3,
-      "dex": 15,
+      "dex": 14,
       "dexMod": 2,
       "con": 16,
       "conMod": 3,
       "int": 10,
       "intMod": 0,
-      "wiz": 11,
-      "wizMod": 0,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Espada Sombria",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno Vital",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Wraith",
+    "hp": 38,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 12,
+      "conMod": 1,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Toque Espectral",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Dreno Vital",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Specter",
+    "hp": 24,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 8,
+      "strMod": -1,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 10,
+      "conMod": 0,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 14,
+      "wizMod": 2,
       "cha": 10,
       "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Toque",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Dreno",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ghost",
+    "hp": 35,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 8,
+      "strMod": -1,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 12,
+      "conMod": 1,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Toque Fantasma",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Medo",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Revenant",
+    "hp": 70,
+    "ac": 17,
+    "mov": 30,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 18,
+      "conMod": 4,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Punho Morto",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Vampire Spawn",
+    "hp": 55,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 16,
+      "conMod": 3,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Vampire",
+    "hp": 90,
+    "ac": 17,
+    "mov": 40,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 18,
+      "conMod": 4,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 20,
+      "chaMod": 5
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno de Sangue",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mummy",
+    "hp": 58,
+    "ac": 11,
+    "mov": 20,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 18,
+      "conMod": 4,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Punho",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Maldição",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Banshee",
+    "hp": 60,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 12,
+      "conMod": 1,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Toque",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Medo",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Grito Mortal",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Terror",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dullahan",
+    "hp": 100,
+    "ac": 18,
+    "mov": 40,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 18,
+      "conMod": 4,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Espada Negra",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cabeça Arremessada",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Medo",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lich",
+    "hp": 120,
+    "ac": 19,
+    "mov": 30,
+    "stats": {
+      "str": 12,
+      "strMod": 1,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 16,
+      "conMod": 3,
+      "int": 22,
+      "intMod": 6,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Toque da Morte",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "int",
+        "extra": {
+          "name": "Dreno",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Raio Arcano",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "int",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Death Knight",
+    "hp": 140,
+    "ac": 20,
+    "mov": 30,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 20,
+      "conMod": 5,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Espada Maldita",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Fogo Sombrio",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lich King",
+    "hp": 220,
+    "ac": 22,
+    "mov": 30,
+    "stats": {
+      "str": 24,
+      "strMod": 7,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 24,
+      "conMod": 7,
+      "int": 26,
+      "intMod": 8,
+      "wiz": 24,
+      "wizMod": 7,
+      "cha": 22,
+      "chaMod": 6
+    },
+    "weapons": [
+      {
+        "name": "Lâmina da Morte",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno",
+          "dice": 10,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Explosão Arcana",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "int",
+        "extra": {
+          "name": "Atordoamento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Wolf",
+    "hp": 16,
+    "ac": 13,
+    "mov": 40,
+    "stats": {
+      "str": 12,
+      "strMod": 1,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 12,
+      "conMod": 1,
+      "int": 3,
+      "intMod": -4,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 2,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dire Wolf",
+    "hp": 30,
+    "ac": 14,
+    "mov": 50,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 14,
+      "conMod": 2,
+      "int": 4,
+      "intMod": -3,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bear",
+    "hp": 40,
+    "ac": 11,
+    "mov": 40,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 16,
+      "conMod": 3,
+      "int": 2,
+      "intMod": -4,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 6,
+      "chaMod": -2
     },
     "weapons": [
       {
@@ -142,45 +1256,383 @@
         "dice": 8,
         "multiplier": 1,
         "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Dire Bear",
+    "hp": 70,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 20,
+      "conMod": 5,
+      "int": 2,
+      "intMod": -4,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
         "extra": {
-          "name": "Ferida Profunda",
+          "name": "Sangramento",
           "dice": 4,
           "multiplier": 1
         }
       }
     ]
   },
-
   {
-    "name": "Minotauro",
-    "hp": 55,
+    "name": "Giant Rat",
+    "hp": 12,
+    "ac": 12,
+    "mov": 30,
+    "stats": {
+      "str": 8,
+      "strMod": -1,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 10,
+      "conMod": 0,
+      "int": 2,
+      "intMod": -4,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 4,
+      "chaMod": -3
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Doença",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Giant Boar",
+    "hp": 35,
+    "ac": 12,
+    "mov": 40,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 16,
+      "conMod": 3,
+      "int": 2,
+      "intMod": -4,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Presas",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Investida",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Giant Crocodile",
+    "hp": 75,
     "ac": 14,
-    "mov": 7,
+    "mov": 30,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 20,
+      "conMod": 5,
+      "int": 4,
+      "intMod": -3,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Agarrar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cauda",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Giant Spider",
+    "hp": 45,
+    "ac": 14,
+    "mov": 30,
+    "stats": {
+      "str": 14,
+      "strMod": 2,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 14,
+      "conMod": 2,
+      "int": 2,
+      "intMod": -4,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 4,
+      "chaMod": -3
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Teia",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Imobilizar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Giant Scorpion",
+    "hp": 52,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 16,
+      "conMod": 3,
+      "int": 2,
+      "intMod": -4,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 4,
+      "chaMod": -3
+    },
+    "weapons": [
+      {
+        "name": "Pinças",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Ferrão",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Owlbear",
+    "hp": 60,
+    "ac": 15,
+    "mov": 40,
     "stats": {
       "str": 20,
       "strMod": 5,
-      "dex": 11,
-      "dexMod": 0,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 18,
+      "conMod": 4,
+      "int": 3,
+      "intMod": -4,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 7,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Bico",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Mimic",
+    "hp": 45,
+    "ac": 14,
+    "mov": 20,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 16,
+      "conMod": 3,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Ácido",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Basilisk",
+    "hp": 55,
+    "ac": 15,
+    "mov": 20,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 18,
+      "conMod": 4,
+      "int": 2,
+      "intMod": -4,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Veneno",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Olhar Petrificante",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "wiz",
+        "extra": {
+          "name": "Petrificação",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Minotaur",
+    "hp": 75,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 14,
+      "dexMod": 2,
       "con": 18,
       "conMod": 4,
       "int": 6,
       "intMod": -2,
       "wiz": 10,
       "wizMod": 0,
-      "cha": 8,
-      "chaMod": -1
+      "cha": 10,
+      "chaMod": 0
     },
     "weapons": [
       {
-        "name": "Machado Duplo",
-        "dice": 10,
+        "name": "Machado Grande",
+        "dice": 12,
         "multiplier": 1,
         "stat": "str",
         "extra": null
       },
       {
         "name": "Chifres",
-        "dice": 8,
+        "dice": 10,
         "multiplier": 1,
         "stat": "str",
         "extra": {
@@ -191,21 +1643,20 @@
       }
     ]
   },
-
   {
     "name": "Medusa",
-    "hp": 35,
+    "hp": 50,
     "ac": 15,
-    "mov": 6,
+    "mov": 30,
     "stats": {
-      "str": 12,
-      "strMod": 1,
-      "dex": 16,
-      "dexMod": 3,
-      "con": 12,
-      "conMod": 1,
-      "int": 15,
-      "intMod": 2,
+      "str": 14,
+      "strMod": 2,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 14,
+      "conMod": 2,
+      "int": 16,
+      "intMod": 3,
       "wiz": 14,
       "wizMod": 2,
       "cha": 18,
@@ -213,40 +1664,47 @@
     },
     "weapons": [
       {
-        "name": "Adaga",
-        "dice": 4,
-        "multiplier": 1,
-        "stat": "dex",
-        "extra": null
-      },
-      {
         "name": "Serpentes",
         "dice": 6,
         "multiplier": 2,
         "stat": "dex",
-        "extra": null
+        "extra": {
+          "name": "Veneno",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Olhar Petrificante",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "wiz",
+        "extra": {
+          "name": "Petrificação",
+          "dice": 6,
+          "multiplier": 1
+        }
       }
     ]
   },
-
   {
-    "name": "Ciclope",
-    "hp": 70,
-    "ac": 13,
-    "mov": 7,
+    "name": "Cyclops",
+    "hp": 100,
+    "ac": 14,
+    "mov": 30,
     "stats": {
-      "str": 22,
-      "strMod": 6,
-      "dex": 8,
-      "dexMod": -1,
-      "con": 20,
-      "conMod": 5,
-      "int": 6,
-      "intMod": -2,
-      "wiz": 8,
-      "wizMod": -1,
-      "cha": 8,
-      "chaMod": -1
+      "str": 24,
+      "strMod": 7,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 22,
+      "conMod": 6,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
     },
     "weapons": [
       {
@@ -257,7 +1715,47 @@
         "extra": null
       },
       {
-        "name": "Pedra",
+        "name": "Arremesso de Rocha",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Hydra",
+    "hp": 110,
+    "ac": 16,
+    "mov": 40,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 20,
+      "conMod": 5,
+      "int": 4,
+      "intMod": -3,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 3,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cauda",
         "dice": 10,
         "multiplier": 1,
         "stat": "str",
@@ -265,56 +1763,189 @@
       }
     ]
   },
-
   {
-    "name": "Hidra",
-    "hp": 90,
-    "ac": 16,
-    "mov": 5,
+    "name": "Cerberus",
+    "hp": 100,
+    "ac": 17,
+    "mov": 50,
     "stats": {
-      "str": 18,
-      "strMod": 4,
-      "dex": 12,
-      "dexMod": 1,
+      "str": 22,
+      "strMod": 6,
+      "dex": 16,
+      "dexMod": 3,
       "con": 20,
       "conMod": 5,
-      "int": 4,
-      "intMod": -3,
-      "wiz": 10,
-      "wizMod": 0,
-      "cha": 5,
-      "chaMod": -3
+      "int": 6,
+      "intMod": -2,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 3,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Uivo Infernal",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Medo",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Chimera",
+    "hp": 95,
+    "ac": 16,
+    "mov": 40,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 18,
+      "conMod": 4,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 12,
+      "chaMod": 1
     },
     "weapons": [
       {
         "name": "Mordida",
         "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Garras",
+        "dice": 6,
         "multiplier": 2,
         "stat": "str",
         "extra": null
       },
       {
-        "name": "Cauda",
-        "dice": 6,
-        "multiplier": 2,
-        "stat": "str",
-        "extra": null
+        "name": "Sopro de Fogo",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "con",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 6,
+          "multiplier": 1
+        }
       }
     ]
   },
-
   {
-    "name": "Centauro",
-    "hp": 38,
-    "ac": 14,
-    "mov": 10,
+    "name": "Harpy",
+    "hp": 30,
+    "ac": 13,
+    "mov": 40,
     "stats": {
-      "str": 16,
-      "strMod": 3,
-      "dex": 14,
-      "dexMod": 2,
-      "con": 14,
-      "conMod": 2,
+      "str": 12,
+      "strMod": 1,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 12,
+      "conMod": 1,
+      "int": 7,
+      "intMod": -2,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 13,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Grito Hipnótico",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Confusão",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Siren",
+    "hp": 35,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 12,
+      "conMod": 1,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Canção Encantadora",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Enfeitiçar",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Centaur",
+    "hp": 55,
+    "ac": 14,
+    "mov": 50,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 16,
+      "conMod": 3,
       "int": 10,
       "intMod": 0,
       "wiz": 12,
@@ -331,75 +1962,70 @@
         "extra": null
       },
       {
-        "name": "Arco",
-        "dice": 8,
+        "name": "Cascos",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Satyr",
+    "hp": 28,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 12,
+      "strMod": 1,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 12,
+      "conMod": 1,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Lança",
+        "dice": 6,
         "multiplier": 1,
         "stat": "dex",
         "extra": null
       },
       {
-        "name": "Coice",
+        "name": "Flauta Encantada",
         "dice": 6,
-        "multiplier": 2,
-        "stat": "str",
-        "extra": null
-      }
-    ]
-  },
-
-  {
-    "name": "Grifo",
-    "hp": 48,
-    "ac": 15,
-    "mov": 10,
-    "stats": {
-      "str": 18,
-      "strMod": 4,
-      "dex": 15,
-      "dexMod": 2,
-      "con": 16,
-      "conMod": 3,
-      "int": 5,
-      "intMod": -3,
-      "wiz": 12,
-      "wizMod": 1,
-      "cha": 8,
-      "chaMod": -1
-    },
-    "weapons": [
-      {
-        "name": "Bico",
-        "dice": 8,
         "multiplier": 1,
-        "stat": "str",
-        "extra": null
-      },
-      {
-        "name": "Garras",
-        "dice": 6,
-        "multiplier": 2,
-        "stat": "str",
-        "extra": null
+        "stat": "cha",
+        "extra": {
+          "name": "Sono",
+          "dice": 4,
+          "multiplier": 1
+        }
       }
     ]
   },
-
   {
-    "name": "Quimera",
-    "hp": 65,
-    "ac": 16,
-    "mov": 7,
+    "name": "Griffin",
+    "hp": 70,
+    "ac": 15,
+    "mov": 80,
     "stats": {
-      "str": 18,
-      "strMod": 4,
-      "dex": 14,
-      "dexMod": 2,
+      "str": 20,
+      "strMod": 5,
+      "dex": 16,
+      "dexMod": 3,
       "con": 18,
       "conMod": 4,
-      "int": 8,
-      "intMod": -1,
-      "wiz": 12,
-      "wizMod": 1,
+      "int": 4,
+      "intMod": -3,
+      "wiz": 14,
+      "wizMod": 2,
       "cha": 10,
       "chaMod": 0
     },
@@ -412,6 +2038,35 @@
         "extra": null
       },
       {
+        "name": "Bico",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Manticore",
+    "hp": 75,
+    "ac": 16,
+    "mov": 50,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 18,
+      "conMod": 4,
+      "int": 5,
+      "intMod": -3,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
         "name": "Mordida",
         "dice": 8,
         "multiplier": 1,
@@ -419,211 +2074,211 @@
         "extra": null
       },
       {
-        "name": "Cauda de Serpente",
+        "name": "Espinhos",
         "dice": 6,
-        "multiplier": 1,
+        "multiplier": 2,
         "stat": "dex",
         "extra": {
-          "name": "Veneno",
-          "dice": 6,
+          "name": "Sangramento",
+          "dice": 4,
           "multiplier": 1
         }
       }
     ]
   },
-
   {
-    "name": "Vampiro",
-    "hp": 58,
-    "ac": 17,
-    "mov": 8,
+    "name": "Sphinx",
+    "hp": 120,
+    "ac": 18,
+    "mov": 40,
     "stats": {
-      "str": 16,
-      "strMod": 3,
-      "dex": 18,
-      "dexMod": 4,
-      "con": 16,
-      "conMod": 3,
-      "int": 17,
-      "intMod": 3,
-      "wiz": 15,
-      "wizMod": 2,
-      "cha": 20,
-      "chaMod": 5
+      "str": 22,
+      "strMod": 6,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 22,
+      "conMod": 6,
+      "int": 20,
+      "intMod": 5,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 22,
+      "chaMod": 6
     },
     "weapons": [
       {
         "name": "Garras",
-        "dice": 6,
+        "dice": 8,
         "multiplier": 2,
-        "stat": "dex",
+        "stat": "str",
         "extra": null
       },
-      {
-        "name": "Mordida",
-        "dice": 8,
-        "multiplier": 1,
-        "stat": "str",
-        "extra": {
-          "name": "Drenar Sangue",
-          "dice": 6,
-          "multiplier": 1
-        }
-      }
-    ]
-  },
-
-  {
-    "name": "Dragão Jovem",
-    "hp": 110,
-    "ac": 18,
-    "mov": 8,
-    "stats": {
-      "str": 21,
-      "strMod": 5,
-      "dex": 12,
-      "dexMod": 1,
-      "con": 19,
-      "conMod": 4,
-      "int": 14,
-      "intMod": 2,
-      "wiz": 13,
-      "wizMod": 1,
-      "cha": 17,
-      "chaMod": 3
-    },
-    "weapons": [
       {
         "name": "Mordida",
         "dice": 10,
         "multiplier": 1,
         "stat": "str",
-        "extra": {
-          "name": "Chamas",
-          "dice": 6,
-          "multiplier": 2
-        }
-      },
-      {
-        "name": "Garras",
-        "dice": 6,
-        "multiplier": 2,
-        "stat": "str",
         "extra": null
       },
       {
-        "name": "Cauda",
-        "dice": 8,
+        "name": "Enigma Arcano",
+        "dice": 10,
         "multiplier": 1,
-        "stat": "str",
-        "extra": null
+        "stat": "int",
+        "extra": {
+          "name": "Confusão",
+          "dice": 6,
+          "multiplier": 1
+        }
       }
     ]
   },
-
+  {
+    "name": "Lamia",
+    "hp": 70,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 16,
+      "conMod": 3,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Draugr",
+    "hp": 55,
+    "ac": 16,
+    "mov": 30,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 18,
+      "conMod": 4,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Machado",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Congelamento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
   {
     "name": "Troll",
-    "hp": 75,
+    "hp": 70,
     "ac": 15,
-    "mov": 6,
+    "mov": 30,
     "stats": {
-      "str": 19,
-      "strMod": 4,
-      "dex": 10,
-      "dexMod": 0,
+      "str": 22,
+      "strMod": 6,
+      "dex": 12,
+      "dexMod": 1,
       "con": 20,
       "conMod": 5,
-      "int": 7,
-      "intMod": -2,
-      "wiz": 9,
-      "wizMod": -1,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 10,
+      "wizMod": 0,
       "cha": 7,
       "chaMod": -2
     },
     "weapons": [
       {
         "name": "Garras",
-        "dice": 6,
+        "dice": 8,
         "multiplier": 2,
         "stat": "str",
         "extra": null
       },
       {
         "name": "Mordida",
-        "dice": 8,
-        "multiplier": 1,
-        "stat": "str",
-        "extra": null
-      }
-    ]
-  },
-
-  {
-    "name": "Golem de Pedra",
-    "hp": 100,
-    "ac": 17,
-    "mov": 4,
-    "stats": {
-      "str": 22,
-      "strMod": 6,
-      "dex": 5,
-      "dexMod": -3,
-      "con": 20,
-      "conMod": 5,
-      "int": 3,
-      "intMod": -4,
-      "wiz": 8,
-      "wizMod": -1,
-      "cha": 3,
-      "chaMod": -4
-    },
-    "weapons": [
-      {
-        "name": "Punho de Pedra",
         "dice": 10,
         "multiplier": 1,
         "stat": "str",
-        "extra": null
-      },
-      {
-        "name": "Dois Punhos",
-        "dice": 6,
-        "multiplier": 2,
-        "stat": "str",
-        "extra": null
+        "extra": {
+          "name": "Sangramento",
+          "dice": 4,
+          "multiplier": 1
+        }
       }
     ]
   },
-
   {
-    "name": "Kraken",
+    "name": "Jotunn",
     "hp": 130,
-    "ac": 17,
-    "mov": 6,
+    "ac": 18,
+    "mov": 40,
     "stats": {
-      "str": 24,
-      "strMod": 7,
-      "dex": 14,
-      "dexMod": 2,
-      "con": 22,
-      "conMod": 6,
-      "int": 16,
-      "intMod": 3,
-      "wiz": 15,
-      "wizMod": 2,
+      "str": 26,
+      "strMod": 8,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 24,
+      "conMod": 7,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 16,
+      "wizMod": 3,
       "cha": 14,
       "chaMod": 2
     },
     "weapons": [
       {
-        "name": "Tentáculo",
-        "dice": 8,
+        "name": "Machado Gigante",
+        "dice": 12,
         "multiplier": 2,
         "stat": "str",
         "extra": null
       },
       {
-        "name": "Mordida",
+        "name": "Arremesso de Rocha",
         "dice": 12,
         "multiplier": 1,
         "stat": "str",
@@ -631,34 +2286,113 @@
       }
     ]
   },
-
   {
-    "name": "Valquíria",
-    "hp": 60,
-    "ac": 18,
-    "mov": 9,
+    "name": "Frost Giant",
+    "hp": 150,
+    "ac": 17,
+    "mov": 40,
     "stats": {
-      "str": 17,
-      "strMod": 3,
-      "dex": 16,
-      "dexMod": 3,
-      "con": 15,
-      "conMod": 2,
+      "str": 26,
+      "strMod": 8,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 24,
+      "conMod": 7,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Machado de Gelo",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Congelamento",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Arremesso de Rocha",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Fire Giant",
+    "hp": 160,
+    "ac": 18,
+    "mov": 40,
+    "stats": {
+      "str": 28,
+      "strMod": 9,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 26,
+      "conMod": 8,
       "int": 12,
       "intMod": 1,
       "wiz": 16,
       "wizMod": 3,
-      "cha": 15,
-      "chaMod": 2
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Espada Flamejante",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Punho",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Valkyrie",
+    "hp": 90,
+    "ac": 18,
+    "mov": 50,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 18,
+      "conMod": 4,
+      "int": 14,
+      "intMod": 2,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 20,
+      "chaMod": 5
     },
     "weapons": [
       {
         "name": "Lança Celestial",
-        "dice": 8,
+        "dice": 10,
         "multiplier": 1,
-        "stat": "str",
+        "stat": "dex",
         "extra": {
-          "name": "Raio",
+          "name": "Luz Sagrada",
           "dice": 6,
           "multiplier": 1
         }
@@ -672,104 +2406,208 @@
       }
     ]
   },
-
   {
-    "name": "Draugr",
-    "hp": 48,
-    "ac": 16,
-    "mov": 5,
+    "name": "Fenrir",
+    "hp": 180,
+    "ac": 18,
+    "mov": 80,
     "stats": {
-      "str": 17,
-      "strMod": 3,
-      "dex": 8,
-      "dexMod": -1,
-      "con": 17,
-      "conMod": 3,
+      "str": 28,
+      "strMod": 9,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 24,
+      "conMod": 7,
       "int": 8,
       "intMod": -1,
-      "wiz": 10,
-      "wizMod": 0,
-      "cha": 6,
-      "chaMod": -2
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 14,
+      "chaMod": 2
     },
     "weapons": [
       {
-        "name": "Machado Nórdico",
-        "dice": 8,
+        "name": "Mordida",
+        "dice": 12,
         "multiplier": 1,
         "stat": "str",
-        "extra": null
+        "extra": {
+          "name": "Sangramento",
+          "dice": 8,
+          "multiplier": 1
+        }
       },
       {
-        "name": "Punho Morto",
-        "dice": 6,
+        "name": "Garras",
+        "dice": 10,
         "multiplier": 2,
         "stat": "str",
         "extra": null
       }
     ]
   },
-
   {
-    "name": "Jotunn",
-    "hp": 120,
-    "ac": 16,
-    "mov": 6,
+    "name": "Jormungandr",
+    "hp": 300,
+    "ac": 20,
+    "mov": 40,
     "stats": {
-      "str": 25,
-      "strMod": 7,
-      "dex": 9,
-      "dexMod": -1,
-      "con": 23,
-      "conMod": 6,
+      "str": 30,
+      "strMod": 10,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 28,
+      "conMod": 9,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Veneno",
+          "dice": 10,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cauda",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kraken",
+    "hp": 260,
+    "ac": 18,
+    "mov": 50,
+    "stats": {
+      "str": 28,
+      "strMod": 9,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 26,
+      "conMod": 8,
       "int": 12,
       "intMod": 1,
-      "wiz": 13,
-      "wizMod": 1,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Tentáculos",
+        "dice": 10,
+        "multiplier": 4,
+        "stat": "str",
+        "extra": {
+          "name": "Agarrar",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Bico",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Leviathan",
+    "hp": 350,
+    "ac": 21,
+    "mov": 60,
+    "stats": {
+      "str": 32,
+      "strMod": 11,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 30,
+      "conMod": 10,
+      "int": 14,
+      "intMod": 2,
+      "wiz": 22,
+      "wizMod": 6,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 10,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cauda",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Jato Abissal",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "con",
+        "extra": {
+          "name": "Atordoamento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Wyvern",
+    "hp": 85,
+    "ac": 17,
+    "mov": 80,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 18,
+      "conMod": 4,
+      "int": 5,
+      "intMod": -3,
+      "wiz": 14,
+      "wizMod": 2,
       "cha": 10,
       "chaMod": 0
     },
     "weapons": [
       {
-        "name": "Machado Gigante",
-        "dice": 12,
-        "multiplier": 2,
-        "stat": "str",
-        "extra": null
-      },
-      {
-        "name": "Punho",
-        "dice": 10,
-        "multiplier": 1,
-        "stat": "str",
-        "extra": null
-      }
-    ]
-  },
-
-  {
-    "name": "Basilisco",
-    "hp": 52,
-    "ac": 15,
-    "mov": 5,
-    "stats": {
-      "str": 16,
-      "strMod": 3,
-      "dex": 8,
-      "dexMod": -1,
-      "con": 18,
-      "conMod": 4,
-      "int": 3,
-      "intMod": -4,
-      "wiz": 12,
-      "wizMod": 1,
-      "cha": 5,
-      "chaMod": -3
-    },
-    "weapons": [
-      {
         "name": "Mordida",
-        "dice": 8,
+        "dice": 10,
         "multiplier": 1,
         "stat": "str",
         "extra": {
@@ -779,31 +2617,1024 @@
         }
       },
       {
-        "name": "Cauda",
+        "name": "Ferrão",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 10,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Young Dragon",
+    "hp": 100,
+    "ac": 17,
+    "mov": 80,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 20,
+      "conMod": 5,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Garras",
         "dice": 6,
         "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Sopro",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "con",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Adult Dragon",
+    "hp": 180,
+    "ac": 20,
+    "mov": 80,
+    "stats": {
+      "str": 26,
+      "strMod": 8,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 24,
+      "conMod": 7,
+      "int": 18,
+      "intMod": 4,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 22,
+      "chaMod": 6
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Garras",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Sopro",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "con",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 10,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ancient Dragon",
+    "hp": 300,
+    "ac": 22,
+    "mov": 80,
+    "stats": {
+      "str": 30,
+      "strMod": 10,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 30,
+      "conMod": 10,
+      "int": 22,
+      "intMod": 6,
+      "wiz": 24,
+      "wizMod": 7,
+      "cha": 26,
+      "chaMod": 8
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 10,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Garras",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Sopro",
+        "dice": 12,
+        "multiplier": 3,
+        "stat": "con",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 12,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Frost Drake",
+    "hp": 120,
+    "ac": 18,
+    "mov": 70,
+    "stats": {
+      "str": 24,
+      "strMod": 7,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 22,
+      "conMod": 6,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Congelamento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Sopro de Gelo",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "con",
+        "extra": {
+          "name": "Congelamento",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dracolich",
+    "hp": 240,
+    "ac": 21,
+    "mov": 80,
+    "stats": {
+      "str": 28,
+      "strMod": 9,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 26,
+      "conMod": 8,
+      "int": 22,
+      "intMod": 6,
+      "wiz": 22,
+      "wizMod": 6,
+      "cha": 20,
+      "chaMod": 5
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Dreno",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Garras",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Sopro da Morte",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "con",
+        "extra": {
+          "name": "Dreno",
+          "dice": 10,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hellhound",
+    "hp": 45,
+    "ac": 15,
+    "mov": 50,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 16,
+      "conMod": 3,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Sopro Infernal",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "con",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Imp",
+    "hp": 18,
+    "ac": 13,
+    "mov": 40,
+    "stats": {
+      "str": 8,
+      "strMod": -1,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 10,
+      "conMod": 0,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Ferrão",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Succubus",
+    "hp": 55,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 12,
+      "strMod": 1,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 14,
+      "conMod": 2,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 22,
+      "chaMod": 6
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Beijo",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Dreno Vital",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Incubus",
+    "hp": 55,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 14,
+      "conMod": 2,
+      "int": 16,
+      "intMod": 3,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 22,
+      "chaMod": 6
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Toque Mental",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Dreno",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Balor",
+    "hp": 250,
+    "ac": 21,
+    "mov": 40,
+    "stats": {
+      "str": 28,
+      "strMod": 9,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 26,
+      "conMod": 8,
+      "int": 24,
+      "intMod": 7,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 24,
+      "chaMod": 7
+    },
+    "weapons": [
+      {
+        "name": "Espada Demoníaca",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Fogo",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Chicote",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Agarrar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Explosão Infernal",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "cha",
+        "extra": {
+          "name": "Fogo",
+          "dice": 10,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Fire Elemental",
+    "hp": 70,
+    "ac": 14,
+    "mov": 50,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 16,
+      "conMod": 3,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Toque Flamejante",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Water Elemental",
+    "hp": 80,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 18,
+      "conMod": 4,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Pancada Aquática",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Earth Elemental",
+    "hp": 100,
+    "ac": 17,
+    "mov": 30,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 22,
+      "conMod": 6,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Punho de Pedra",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Tremor",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Air Elemental",
+    "hp": 80,
+    "ac": 17,
+    "mov": 90,
+    "stats": {
+      "str": 14,
+      "strMod": 2,
+      "dex": 22,
+      "dexMod": 6,
+      "con": 16,
+      "conMod": 3,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Golpe de Vento",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ice Elemental",
+    "hp": 90,
+    "ac": 16,
+    "mov": 40,
+    "stats": {
+      "str": 20,
+      "strMod": 5,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 20,
+      "conMod": 5,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Toque Gélido",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": {
+          "name": "Congelamento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Magma Elemental",
+    "hp": 100,
+    "ac": 16,
+    "mov": 30,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 20,
+      "conMod": 5,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Punho de Magma",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Storm Elemental",
+    "hp": 110,
+    "ac": 18,
+    "mov": 80,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 20,
+      "dexMod": 5,
+      "con": 18,
+      "conMod": 4,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Raio",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "int",
+        "extra": {
+          "name": "Choque",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Vendaval",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Treant",
+    "hp": 95,
+    "ac": 16,
+    "mov": 30,
+    "stats": {
+      "str": 24,
+      "strMod": 7,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 22,
+      "conMod": 6,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Galho",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Raízes",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "wiz",
+        "extra": {
+          "name": "Imobilizar",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dryad",
+    "hp": 35,
+    "ac": 13,
+    "mov": 30,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 12,
+      "conMod": 1,
+      "int": 14,
+      "intMod": 2,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Espinhos",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": {
+          "name": "Veneno",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Encanto",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Enfeitiçar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pixie",
+    "hp": 12,
+    "ac": 15,
+    "mov": 40,
+    "stats": {
+      "str": 6,
+      "strMod": -2,
+      "dex": 20,
+      "dexMod": 5,
+      "con": 8,
+      "conMod": -1,
+      "int": 14,
+      "intMod": 2,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Adaga",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Pó Feérico",
+        "dice": 4,
+        "multiplier": 1,
+        "stat": "cha",
+        "extra": {
+          "name": "Confusão",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Werewolf",
+    "hp": 55,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 16,
+      "conMod": 3,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 6,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Maldição",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Wendigo",
+    "hp": 85,
+    "ac": 16,
+    "mov": 50,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 18,
+      "conMod": 4,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Garras",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Medo",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kelpie",
+    "hp": 55,
+    "ac": 14,
+    "mov": 50,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 16,
+      "dexMod": 3,
+      "con": 16,
+      "conMod": 3,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Agarrar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Coice",
+        "dice": 8,
+        "multiplier": 1,
         "stat": "str",
         "extra": null
       }
     ]
   },
-
   {
-    "name": "Harpy",
-    "hp": 28,
-    "ac": 13,
-    "mov": 9,
+    "name": "Black Shuck",
+    "hp": 48,
+    "ac": 15,
+    "mov": 60,
     "stats": {
-      "str": 10,
-      "strMod": 0,
-      "dex": 17,
-      "dexMod": 3,
-      "con": 11,
-      "conMod": 0,
-      "int": 8,
-      "intMod": -1,
-      "wiz": 12,
-      "wizMod": 1,
+      "str": 16,
+      "strMod": 3,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 16,
+      "conMod": 3,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Mordida Sombria",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Medo",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Nokken",
+    "hp": 50,
+    "ac": 15,
+    "mov": 50,
+    "stats": {
+      "str": 14,
+      "strMod": 2,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 14,
+      "conMod": 2,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 16,
+      "wizMod": 3,
       "cha": 16,
       "chaMod": 3
     },
@@ -811,59 +3642,808 @@
       {
         "name": "Garras",
         "dice": 6,
-        "multiplier": 2,
+        "multiplier": 1,
         "stat": "dex",
         "extra": null
       },
       {
-        "name": "Bico",
-        "dice": 6,
+        "name": "Canção das Águas",
+        "dice": 8,
         "multiplier": 1,
-        "stat": "dex",
+        "stat": "cha",
+        "extra": {
+          "name": "Enfeitiçar",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ogre",
+    "hp": 60,
+    "ac": 11,
+    "mov": 40,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 20,
+      "conMod": 5,
+      "int": 5,
+      "intMod": -3,
+      "wiz": 8,
+      "wizMod": -1,
+      "cha": 7,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Clava",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Arremesso de Pedra",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
         "extra": null
       }
     ]
   },
-
   {
-    "name": "Manticora",
-    "hp": 68,
-    "ac": 16,
-    "mov": 7,
+    "name": "Hill Giant",
+    "hp": 120,
+    "ac": 14,
+    "mov": 40,
+    "stats": {
+      "str": 26,
+      "strMod": 8,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 24,
+      "conMod": 7,
+      "int": 8,
+      "intMod": -1,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Clava Gigante",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Arremesso de Rocha",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Stone Giant",
+    "hp": 140,
+    "ac": 17,
+    "mov": 40,
+    "stats": {
+      "str": 28,
+      "strMod": 9,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 26,
+      "conMod": 8,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 12,
+      "chaMod": 1
+    },
+    "weapons": [
+      {
+        "name": "Martelo de Pedra",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Arremesso de Rocha",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Fire Giant Champion",
+    "hp": 200,
+    "ac": 20,
+    "mov": 40,
+    "stats": {
+      "str": 30,
+      "strMod": 10,
+      "dex": 14,
+      "dexMod": 2,
+      "con": 28,
+      "conMod": 9,
+      "int": 14,
+      "intMod": 2,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Espada Flamejante",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 10,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Pisotear",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Behemoth",
+    "hp": 220,
+    "ac": 18,
+    "mov": 50,
+    "stats": {
+      "str": 30,
+      "strMod": 10,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 28,
+      "conMod": 9,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Garras",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Pisotear",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Tarrasque",
+    "hp": 500,
+    "ac": 25,
+    "mov": 40,
+    "stats": {
+      "str": 35,
+      "strMod": 12,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 35,
+      "conMod": 12,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 10,
+      "chaMod": 0
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Sangramento",
+          "dice": 10,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Garras",
+        "dice": 10,
+        "multiplier": 4,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Cauda",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Chifres",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Investida",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Beholder",
+    "hp": 150,
+    "ac": 18,
+    "mov": 30,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 18,
+      "conMod": 4,
+      "int": 22,
+      "intMod": 6,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Raio Desintegrador",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "int",
+        "extra": {
+          "name": "Desintegração",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mind Flayer",
+    "hp": 80,
+    "ac": 15,
+    "mov": 30,
+    "stats": {
+      "str": 10,
+      "strMod": 0,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 14,
+      "conMod": 2,
+      "int": 20,
+      "intMod": 5,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Tentáculos",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Agarrar",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Explosão Mental",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "int",
+        "extra": {
+          "name": "Atordoamento",
+          "dice": 8,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Aboleth",
+    "hp": 140,
+    "ac": 17,
+    "mov": 40,
     "stats": {
       "str": 18,
       "strMod": 4,
       "dex": 16,
       "dexMod": 3,
-      "con": 17,
-      "conMod": 3,
-      "int": 8,
-      "intMod": -1,
-      "wiz": 12,
-      "wizMod": 1,
-      "cha": 9,
+      "con": 20,
+      "conMod": 5,
+      "int": 18,
+      "intMod": 4,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 16,
+      "chaMod": 3
+    },
+    "weapons": [
+      {
+        "name": "Tentáculo",
+        "dice": 8,
+        "multiplier": 3,
+        "stat": "str",
+        "extra": {
+          "name": "Doença",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Roper",
+    "hp": 100,
+    "ac": 20,
+    "mov": 10,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 10,
+      "dexMod": 0,
+      "con": 22,
+      "conMod": 6,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 8,
       "chaMod": -1
     },
     "weapons": [
       {
-        "name": "Garras",
-        "dice": 6,
-        "multiplier": 2,
+        "name": "Tentáculo",
+        "dice": 8,
+        "multiplier": 4,
         "stat": "str",
-        "extra": null
+        "extra": {
+          "name": "Agarrar",
+          "dice": 6,
+          "multiplier": 1
+        }
       },
       {
         "name": "Mordida",
-        "dice": 8,
+        "dice": 10,
         "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Veneno",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Otyugh",
+    "hp": 70,
+    "ac": 14,
+    "mov": 30,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 20,
+      "conMod": 5,
+      "int": 5,
+      "intMod": -3,
+      "wiz": 12,
+      "wizMod": 1,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Tentáculo",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": {
+          "name": "Doença",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Mordida",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Gibbering Mouther",
+    "hp": 55,
+    "ac": 9,
+    "mov": 20,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 8,
+      "dexMod": -1,
+      "con": 18,
+      "conMod": 4,
+      "int": 4,
+      "intMod": -3,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 6,
+      "chaMod": -2
+    },
+    "weapons": [
+      {
+        "name": "Mordida",
+        "dice": 6,
+        "multiplier": 4,
+        "stat": "str",
+        "extra": {
+          "name": "Ácido",
+          "dice": 4,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Grito",
+        "dice": 6,
+        "multiplier": 1,
+        "stat": "wiz",
+        "extra": {
+          "name": "Confusão",
+          "dice": 4,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Flesh Golem",
+    "hp": 110,
+    "ac": 15,
+    "mov": 30,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 9,
+      "dexMod": -1,
+      "con": 20,
+      "conMod": 5,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 10,
+      "wizMod": 0,
+      "cha": 5,
+      "chaMod": -3
+    },
+    "weapons": [
+      {
+        "name": "Punho",
+        "dice": 10,
+        "multiplier": 2,
         "stat": "str",
         "extra": null
       },
       {
-        "name": "Espinhos",
-        "dice": 6,
+        "name": "Golpe Selvagem",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Stone Golem",
+    "hp": 120,
+    "ac": 20,
+    "mov": 20,
+    "stats": {
+      "str": 24,
+      "strMod": 7,
+      "dex": 9,
+      "dexMod": -1,
+      "con": 22,
+      "conMod": 6,
+      "int": 10,
+      "intMod": 0,
+      "wiz": 14,
+      "wizMod": 2,
+      "cha": 8,
+      "chaMod": -1
+    },
+    "weapons": [
+      {
+        "name": "Punho",
+        "dice": 10,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      },
+      {
+        "name": "Esmagamento",
+        "dice": 12,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Atordoamento",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Phoenix",
+    "hp": 160,
+    "ac": 19,
+    "mov": 100,
+    "stats": {
+      "str": 16,
+      "strMod": 3,
+      "dex": 24,
+      "dexMod": 7,
+      "con": 20,
+      "conMod": 5,
+      "int": 20,
+      "intMod": 5,
+      "wiz": 22,
+      "wizMod": 6,
+      "cha": 24,
+      "chaMod": 7
+    },
+    "weapons": [
+      {
+        "name": "Garras Flamejantes",
+        "dice": 8,
         "multiplier": 2,
         "stat": "dex",
+        "extra": {
+          "name": "Queimadura",
+          "dice": 8,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Bico",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Explosão de Cinzas",
+        "dice": 12,
+        "multiplier": 2,
+        "stat": "cha",
+        "extra": {
+          "name": "Fogo",
+          "dice": 10,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Unicorn",
+    "hp": 65,
+    "ac": 18,
+    "mov": 80,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 20,
+      "dexMod": 5,
+      "con": 16,
+      "conMod": 3,
+      "int": 12,
+      "intMod": 1,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 20,
+      "chaMod": 5
+    },
+    "weapons": [
+      {
+        "name": "Chifre",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Luz Sagrada",
+          "dice": 6,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cascos",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Pegasus",
+    "hp": 60,
+    "ac": 15,
+    "mov": 90,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 18,
+      "dexMod": 4,
+      "con": 16,
+      "conMod": 3,
+      "int": 6,
+      "intMod": -2,
+      "wiz": 16,
+      "wizMod": 3,
+      "cha": 14,
+      "chaMod": 2
+    },
+    "weapons": [
+      {
+        "name": "Cascos",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "str",
+        "extra": null
+      }
+    ]
+  },
+  {
+    "name": "Djinn",
+    "hp": 120,
+    "ac": 17,
+    "mov": 60,
+    "stats": {
+      "str": 18,
+      "strMod": 4,
+      "dex": 20,
+      "dexMod": 5,
+      "con": 16,
+      "conMod": 3,
+      "int": 22,
+      "intMod": 6,
+      "wiz": 18,
+      "wizMod": 4,
+      "cha": 22,
+      "chaMod": 6
+    },
+    "weapons": [
+      {
+        "name": "Cimitarra de Vento",
+        "dice": 8,
+        "multiplier": 2,
+        "stat": "dex",
+        "extra": null
+      },
+      {
+        "name": "Tornado",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "int",
+        "extra": {
+          "name": "Derrubar",
+          "dice": 6,
+          "multiplier": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mummy Lord",
+    "hp": 180,
+    "ac": 20,
+    "mov": 30,
+    "stats": {
+      "str": 22,
+      "strMod": 6,
+      "dex": 12,
+      "dexMod": 1,
+      "con": 22,
+      "conMod": 6,
+      "int": 18,
+      "intMod": 4,
+      "wiz": 20,
+      "wizMod": 5,
+      "cha": 18,
+      "chaMod": 4
+    },
+    "weapons": [
+      {
+        "name": "Toque Maldito",
+        "dice": 10,
+        "multiplier": 1,
+        "stat": "str",
+        "extra": {
+          "name": "Maldição",
+          "dice": 10,
+          "multiplier": 1
+        }
+      },
+      {
+        "name": "Cajado",
+        "dice": 8,
+        "multiplier": 1,
+        "stat": "str",
         "extra": null
       }
     ]
