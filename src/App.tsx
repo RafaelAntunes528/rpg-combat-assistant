@@ -129,7 +129,7 @@ function App() {
 
       const response =
         await fetch(
-          "/creatures.json"
+          `${import.meta.env.BASE_URL}creatures.json`
         );
 
 
