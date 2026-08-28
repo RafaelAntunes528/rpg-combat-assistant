@@ -7,7 +7,6 @@ import type {
   Party,
   PartyCharacter,
   PartyItem,
-  PartyStatus,
   StatName,
   Weapon
 } from "../types";
