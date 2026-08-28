@@ -10,6 +10,20 @@ import MoveModal from "./components/MoveModal";
 import AddCreatureModal from "./components/AddCreatureModal";
 import RandomEncounterModal from "./components/RandomEncounterModal";
 
+import PartyCard
+  from "./components/PartyCard";
+
+import CreatePartyModal
+  from "./components/CreatePartyModal";
+
+import PartyCharacterModal
+  from "./components/PartyCharacterModal";
+
+import type {
+  Party,
+  PartyCharacter
+} from "./types";
+
 import type {
   AttackResult as AttackResultType,
   Creature,
@@ -46,6 +60,26 @@ function App() {
    * STATE
    * ============================================================
    */
+
+   const [
+     party,
+     setParty
+   ] = useState<Party | null>(
+     null
+   );
+
+   const [
+     partyCreateOpen,
+     setPartyCreateOpen
+   ] = useState(false);
+
+   const [
+     selectedPartyCharacter,
+     setSelectedPartyCharacter
+   ] =
+     useState<PartyCharacter | null>(
+       null
+     );
 
   const [
     creatures,
@@ -122,6 +156,140 @@ function App() {
 
   }, []);
 
+  function createParty(
+    newParty: Party
+  ) {
+
+    setParty(
+      newParty
+    );
+
+    setPartyCreateOpen(
+      false
+    );
+  }
+
+  function removePartyCharacter(
+    characterId: number
+  ) {
+
+    setParty(
+      current => {
+
+        if (!current) {
+          return current;
+        }
+
+        return {
+          ...current,
+
+          characters:
+            current.characters.filter(
+              character =>
+                character.id !==
+                characterId
+            )
+        };
+
+      }
+    );
+
+    setSelectedPartyCharacter(
+      current =>
+        current?.id ===
+        characterId
+          ? null
+          : current
+    );
+  }
+
+  function removeParty() {
+
+    setParty(
+      null
+    );
+
+    setSelectedPartyCharacter(
+      null
+    );
+  }
+
+  function updatePartyCharacter(
+    updatedCharacter:
+      PartyCharacter
+  ) {
+
+    setParty(
+      current => {
+
+        if (!current) {
+          return current;
+        }
+
+        return {
+          ...current,
+
+          characters:
+            current.characters.map(
+              character =>
+                character.id ===
+                updatedCharacter.id
+                  ? updatedCharacter
+                  : character
+            )
+        };
+
+      }
+    );
+  }
+
+  function changePartyHp(
+    characterId: number,
+    amount: number
+  ) {
+
+    setParty(
+      current => {
+
+        if (!current) {
+          return current;
+        }
+
+        return {
+          ...current,
+
+          characters:
+            current.characters.map(
+              character => {
+
+                if (
+                  character.id !==
+                  characterId
+                ) {
+                  return character;
+                }
+
+                return {
+                  ...character,
+
+                  currentHp:
+                    Math.max(
+                      0,
+                      Math.min(
+                        character.hp,
+                        character.currentHp +
+                          amount
+                      )
+                    )
+                };
+
+              }
+            )
+        };
+
+      }
+    );
+  }
 
   async function loadCreatures() {
 
@@ -1044,6 +1212,20 @@ function App() {
             ➕ INIMIGO
           </button>
 
+          {/* ==================================================
+              ADD PARTY
+              ================================================== */}
+          <button
+            className="party-button"
+            onClick={() =>
+              setPartyCreateOpen(
+                true
+              )
+            }
+          >
+            👥 PARTY
+          </button>
+
 
           {/* ==================================================
               CREATE CREATURE
@@ -1093,6 +1275,34 @@ function App() {
 
       <main>
 
+        {party && (
+
+          <PartyCard
+            party={
+              party
+            }
+
+            onOpenCharacter={
+              character =>
+                setSelectedPartyCharacter(
+                  character
+                )
+            }
+
+            onDamage={
+              changePartyHp
+            }
+
+            onRemoveCharacter={
+              removePartyCharacter
+            }
+
+            onRemoveParty={
+              removeParty
+            }
+          />
+
+        )}
 
         <section className="turn-controls">
 
@@ -1474,6 +1684,42 @@ function App() {
             )
           }
 
+        />
+
+      )}
+
+      {partyCreateOpen && (
+
+        <CreatePartyModal
+          onCreate={
+            createParty
+          }
+
+          onClose={() =>
+            setPartyCreateOpen(
+              false
+            )
+          }
+        />
+
+      )}
+
+      {selectedPartyCharacter && (
+
+        <PartyCharacterModal
+          character={
+            selectedPartyCharacter
+          }
+
+          onUpdate={
+            updatePartyCharacter
+          }
+
+          onClose={() =>
+            setSelectedPartyCharacter(
+              null
+            )
+          }
         />
 
       )}

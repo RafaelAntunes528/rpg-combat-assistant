@@ -74,3 +74,61 @@ export interface AttackResult {
 
   totalDamage: number;
 }
+
+/* =========================================================
+   PARTY
+   ========================================================= */
+
+export interface PartyItem {
+  id: number;
+  name: string;
+  quantity: number;
+  description: string;
+}
+
+export interface PartyStatus {
+  id: number;
+  name: string;
+  description: string;
+}
+
+export interface PartyCharacter {
+  id: number;
+
+  name: string;
+
+  hp: number;
+  currentHp: number;
+
+  ac: number;
+
+  /*
+   * A Party não participa no sistema
+   * de turnos dos monstros.
+   *
+   * Mantemos mov apenas para a ficha.
+   */
+  mov: number;
+
+  level: number;
+
+  stats: Stats;
+
+  /*
+   * É exatamente o mesmo Weapon
+   * utilizado pelas criaturas.
+   */
+  weapons: Weapon[];
+
+  inventory: PartyItem[];
+
+  statuses: PartyStatus[];
+}
+
+export interface Party {
+  id: number;
+
+  name: string;
+
+  characters: PartyCharacter[];
+}
