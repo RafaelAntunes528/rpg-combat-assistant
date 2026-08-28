@@ -314,8 +314,8 @@ main {
 
 /* MODAL */
 
-.modal-overlay {
-  position: fixed;
+/*.modal-overlay {
+  position: absolute;
 
   inset: 0;
 
@@ -338,6 +338,23 @@ main {
   padding: 20px;
 
   z-index: 100;
+}*/
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 20px;
+
+  z-index: 100;
+
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .modal {
@@ -634,7 +651,15 @@ input {
   }
 
   .header-actions {
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-actions button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
   }
 
   .turn-controls {
@@ -656,9 +681,7 @@ input {
 
 .header-actions {
   display: flex;
-
   gap: 8px;
-
   align-items: center;
 }
 
