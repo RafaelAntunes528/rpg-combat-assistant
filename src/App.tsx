@@ -42,6 +42,7 @@ import {
 
 import "./App.css";
 
+import HelpModal from "./components/HelpModal";
 
 type ActionMode =
   | "attack"
@@ -52,6 +53,95 @@ type ActionType =
   | "attack"
   | "move";
 
+/*
+ * ============================================================
+ * LOCAL STORAGE
+ * ============================================================
+ * Guardamos um snapshot do jogo atual:
+ * - Party
+ * - Criaturas que estão atualmente no combate
+ * - Turno atual
+ * - Modo de ação selecionado
+ *
+ * A biblioteca de criaturas personalizadas continua separada
+ * em "rpg-creature-library".
+ */
+
+const GAME_STORAGE_KEY = "rpg-combat-manager-game";
+const GAME_STORAGE_VERSION = 1;
+
+interface SavedGame {
+  version: number;
+  party: Party | null;
+  creatures: Creature[];
+  currentTurn: number;
+  actionMode: ActionMode;
+}
+
+function loadSavedGame(): SavedGame | null {
+  try {
+    const saved = localStorage.getItem(GAME_STORAGE_KEY);
+
+    if (!saved) {
+      return null;
+    }
+
+    const parsed = JSON.parse(saved) as Partial<SavedGame>;
+
+    if (!parsed || typeof parsed !== "object") {
+      return null;
+    }
+
+    return {
+      version: GAME_STORAGE_VERSION,
+      party: parsed.party ?? null,
+      creatures: Array.isArray(parsed.creatures)
+        ? parsed.creatures
+        : [],
+      currentTurn:
+        typeof parsed.currentTurn === "number"
+          ? parsed.currentTurn
+          : 0,
+      actionMode:
+        parsed.actionMode === "attack" ||
+        parsed.actionMode === "move" ||
+        parsed.actionMode === "random"
+          ? parsed.actionMode
+          : "random"
+    };
+  } catch (error) {
+    console.error("Erro ao carregar o jogo guardado:", error);
+    return null;
+  }
+}
+
+function saveGame(
+  party: Party | null,
+  creatures: Creature[],
+  currentTurn: number,
+  actionMode: ActionMode
+) {
+  try {
+    const game: SavedGame = {
+      version: GAME_STORAGE_VERSION,
+      party,
+      creatures,
+      currentTurn,
+      actionMode
+    };
+
+    localStorage.setItem(
+      GAME_STORAGE_KEY,
+      JSON.stringify(game)
+    );
+  } catch (error) {
+    console.error("Erro ao guardar o jogo:", error);
+  }
+}
+
+function clearSavedGame() {
+  localStorage.removeItem(GAME_STORAGE_KEY);
+}
 
 function App() {
 
@@ -61,11 +151,16 @@ function App() {
    * ============================================================
    */
 
+   // Lemos o save apenas uma vez quando a App é criada.
+   const [savedGame] = useState<
+     SavedGame | null
+   >(() => loadSavedGame());
+
    const [
      party,
      setParty
    ] = useState<Party | null>(
-     null
+     () => savedGame?.party ?? null
    );
 
    const [
@@ -84,7 +179,9 @@ function App() {
   const [
     creatures,
     setCreatures
-  ] = useState<Creature[]>([]);
+  ] = useState<Creature[]>(
+    () => savedGame?.creatures ?? []
+  );
 
   const [
     templates,
@@ -94,7 +191,9 @@ function App() {
   const [
     currentTurn,
     setCurrentTurn
-  ] = useState(0);
+  ] = useState(
+    () => savedGame?.currentTurn ?? 0
+  );
 
   const [
     loading,
@@ -130,6 +229,11 @@ function App() {
     setDamageModalOpen
   ] = useState(false);
 
+  const [
+    helpOpen,
+    setHelpOpen
+  ] = useState(true);
+
   /*
    * Novo:
    *
@@ -143,7 +247,14 @@ function App() {
   const [
     actionMode,
     setActionMode
-  ] = useState<ActionMode>("random");
+  ] = useState<ActionMode>(
+    () => savedGame?.actionMode ?? "random"
+    );
+
+  const [
+    addMenuOpen,
+    setAddMenuOpen
+  ] = useState(false);
 
   /*
    * ============================================================
@@ -153,8 +264,21 @@ function App() {
 
   useEffect(() => {
     loadCreatures();
-
   }, []);
+
+  useEffect(() => {
+    saveGame(
+      party,
+      creatures,
+      currentTurn,
+      actionMode
+    );
+  }, [
+    party,
+    creatures,
+    currentTurn,
+    actionMode
+  ]);
 
   function createParty(
     newParty: Party
@@ -351,10 +475,10 @@ function App() {
 
 
       /*
-       * Combate começa vazio.
+       * Não limpamos as criaturas aqui.
+       * Se existir um save, elas já foram restauradas
+       * no estado inicial.
        */
-
-      setCreatures([]);
 
 
     } catch (error) {
@@ -990,38 +1114,33 @@ function App() {
    * ============================================================
    */
 
-  function resetCombat() {
+   function resetCombat() {
 
-    setCreatures(
-      current =>
-        current.map(
-          creature => ({
+     const confirmed = window.confirm(
+       "Começar um novo jogo?\n\nA Party e o combate atual serão apagados."
+     );
 
-            ...creature,
+     if (!confirmed) {
+       return;
+     }
 
-            currentHp:
-              creature.hp
+     setParty(null);
+     setCreatures([]);
+     setCurrentTurn(0);
 
-          })
-        )
-    );
+     setAttackResult(null);
+     setMoveCreature(null);
 
+     setAddModalOpen(false);
+     setRandomModalOpen(false);
+     setDamageModalOpen(false);
+     setPartyCreateOpen(false);
+     setCreateCreatureOpen(false);
 
-    setCurrentTurn(
-      0
-    );
+     setSelectedPartyCharacter(null);
 
-
-    setAttackResult(
-      null
-    );
-
-
-    setMoveCreature(
-      null
-    );
-
-  }
+     clearSavedGame();
+   }
 
 
   /*
@@ -1196,78 +1315,64 @@ function App() {
 
         <div className="header-actions">
 
-
-          {/* ==================================================
-              ADD ENEMY
-              ================================================== */}
-
           <button
-            className="add-button"
-            onClick={() =>
-              setAddModalOpen(
-                true
-              )
-            }
+            className="header-add-button"
+            onClick={() => setAddMenuOpen(!addMenuOpen)}
           >
-            ➕ INIMIGO
+            ➕ ADICIONAR ▾
           </button>
 
-          {/* ==================================================
-              ADD PARTY
-              ================================================== */}
-          <button
-            className="party-button"
-            onClick={() =>
-              setPartyCreateOpen(
-                true
-              )
-            }
-          >
-            👥 PARTY
-          </button>
+          {addMenuOpen && (
+            <div className="header-dropdown">
 
+              <button
+                onClick={() => {
+                  setAddModalOpen(true);
+                  setAddMenuOpen(false);
+                }}
+              >
+                ⚔️ Adicionar inimigo
+              </button>
 
-          {/* ==================================================
-              CREATE CREATURE
-              ================================================== */}
+              <button
+                onClick={() => {
+                  setPartyCreateOpen(true);
+                  setAddMenuOpen(false);
+                }}
+              >
+                👥 Criar / gerir Party
+              </button>
 
-          <button
-            className="add-button"
-            onClick={() =>
-              setCreateCreatureOpen(
-                true
-              )
-            }
-          >
-            🐉 CRIAR
-          </button>
-
-
-          {/* ==================================================
-              RANDOM
-              ================================================== */}
+            </div>
+          )}
 
           <button
             className="random-button"
-            onClick={() =>
-              setRandomModalOpen(
-                true
-              )
-            }
+            onClick={() => setRandomModalOpen(true)}
           >
-            🎲 RANDOM
+            🎲 ENCONTRO
           </button>
 
+          <button
+            className="library-button"
+            onClick={() => setCreateCreatureOpen(true)}
+          >
+            🐉 BIBLIOTECA
+          </button>
+
+          <button
+            className="help-button"
+            onClick={() => setHelpOpen(true)}
+          >
+            ❔ GUIA
+          </button>
 
           <button
             className="reset-button"
-            onClick={
-              resetCombat
-            }
+            onClick={resetCombat}
           >
-            ↻
+            ↻ NOVO JOGO
           </button>
-
         </div>
 
       </header>
@@ -1722,6 +1827,14 @@ function App() {
           }
         />
 
+      )}
+
+      {helpOpen && (
+        <HelpModal
+          onClose={() =>
+            setHelpOpen(false)
+          }
+        />
       )}
 
     </div>

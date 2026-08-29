@@ -750,16 +750,6 @@ export default function CreatePartyModal({
   return (
     <div
       className="party-create-overlay"
-      onMouseDown={event => {
-
-        if (
-          event.target ===
-          event.currentTarget
-        ) {
-          onClose();
-        }
-
-      }}
     >
 
       <div className="party-create-modal">

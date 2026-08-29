@@ -651,16 +651,31 @@ input {
   }
 
   .header-actions {
-    flex-direction: column;
-    justify-content: center;
-  }
+      display: grid;
 
-  .header-actions button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 8px;
+    }
+
+    .header-actions > button {
       width: 100%;
-  }
+    }
+
+    .reset-button {
+      min-width: 0;
+    }
+
+    .header-dropdown {
+        position: fixed;
+
+        top: auto;
+        left: 14px;
+        right: 14px;
+
+        width: auto;
+      }
 
   .turn-controls {
     flex-direction: column;
@@ -681,8 +696,20 @@ input {
 
 .header-actions {
   display: flex;
-  gap: 8px;
   align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.header-actions > button {
+  min-height: 42px;
+  white-space: nowrap;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .add-button {
@@ -693,14 +720,85 @@ input {
   background: #634b9b;
 }
 
+.random-button:hover:not(:disabled) {
+  background: #765bb3;
+}
+
+.help-button {
+  background: #303640;
+}
+
+.help-button:hover:not(:disabled) {
+  background: #414752;
+}
+
 .reset-button {
-  width: 42px;
-
+  min-width: 130px;
   height: 42px;
+  padding: 0 14px;
 
-  padding: 0;
+  background: #5a2020;
 
-  font-size: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.reset-button:hover:not(:disabled) {
+  background: #713030;
+}
+
+.library-button {
+  background: #34516b;
+}
+
+.library-button:hover:not(:disabled) {
+  background: #426684;
+}
+
+.header-actions {
+  position: relative;
+}
+
+.header-dropdown {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 0;
+
+  min-width: 210px;
+
+  padding: 6px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+
+  background: #1b1e25;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.45);
+
+  z-index: 1000;
+}
+
+.header-dropdown button {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  text-align: left;
+
+  background: transparent;
+
+  font-size: 12px;
+}
+
+.header-dropdown button:hover {
+  background: rgba(255, 255, 255, 0.07);
 }
 
 /* TURN CONTROLS */
@@ -2907,4 +3005,217 @@ input {
   .party-character-modal-footer button {
     width: 100%;
   }
+}
+
+.help-modal {
+  width: 100%;
+  max-width: 650px;
+
+  max-height: calc(100dvh - 40px);
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PROGRESSO
+   ========================================= */
+
+.guide-progress {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 20px 15px;
+}
+
+.guide-progress-bar {
+  flex: 1;
+
+  height: 6px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.guide-progress-fill {
+  height: 100%;
+
+  background: currentColor;
+
+  border-radius: 999px;
+
+  transition: width 0.25s ease;
+}
+
+.guide-progress span {
+  font-size: 0.8rem;
+
+  opacity: 0.65;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   PASSO
+   ========================================= */
+
+.guide-step {
+  text-align: center;
+
+  padding: 20px 25px 10px;
+}
+
+.guide-icon {
+  font-size: 3.5rem;
+
+  margin-bottom: 12px;
+}
+
+.guide-step h3 {
+  margin: 0 0 10px;
+
+  font-size: 1.5rem;
+}
+
+.guide-description {
+  max-width: 500px;
+
+  margin: 0 auto 25px;
+
+  line-height: 1.5;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   DETALHES
+   ========================================= */
+
+.guide-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  text-align: left;
+
+  max-width: 500px;
+
+  margin: 0 auto;
+}
+
+.guide-detail {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.guide-detail span {
+  flex-shrink: 0;
+
+  font-weight: bold;
+}
+
+.guide-detail p {
+  margin: 0;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.guide-actions {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.guide-back-button {
+  padding: 10px 16px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: inherit;
+
+  cursor: pointer;
+}
+
+.guide-back-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.guide-back-button:disabled {
+  opacity: 0.3;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .help-modal {
+    max-height: calc(100dvh - 20px);
+  }
+
+  .guide-progress {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .guide-step {
+    padding: 15px 15px 5px;
+  }
+
+  .guide-icon {
+    font-size: 3rem;
+  }
+
+  .guide-step h3 {
+    font-size: 1.3rem;
+  }
+
+  .guide-detail {
+    padding: 9px 10px;
+  }
+
+  .guide-actions {
+    flex-direction: row;
+  }
+
+  .guide-actions button {
+    flex: 1;
+  }
+
 }
