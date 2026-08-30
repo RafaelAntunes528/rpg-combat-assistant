@@ -1,3 +1,29 @@
+/*
+ * ============================================================
+ * RPG COMBAT MANAGER
+ * ============================================================
+ *
+ * Ficheiro principal da aplicação.
+ *
+ * RESPONSABILIDADES:
+ * - Gerir o estado do jogo e da Party
+ * - Gerir criaturas e encontros
+ * - Controlar turnos e ações de combate
+ * - Gerir os modais da aplicação
+ * - Guardar e recuperar o jogo através do LocalStorage
+ *
+ * NOTA:
+ * Este ficheiro foi organizado e comentado sem alterar
+ * intencionalmente a lógica existente da aplicação.
+ *
+ * Para desenvolvimento futuro:
+ * - Componentes de UI devem ficar em ./components
+ * - Tipos devem ficar em ./types
+ * - Lógica reutilizável deve ser movida para ficheiros próprios
+ * - Evitar colocar lógica complexa diretamente no JSX
+ * ============================================================
+ */
+
 import {
   useEffect,
   useState
@@ -55,7 +81,7 @@ type ActionType =
 
 /*
  * ============================================================
- * LOCAL STORAGE
+ * LOCAL STORAGE — SAVE / LOAD DO JOGO
  * ============================================================
  * Guardamos um snapshot do jogo atual:
  * - Party
@@ -143,11 +169,22 @@ function clearSavedGame() {
   localStorage.removeItem(GAME_STORAGE_KEY);
 }
 
+/*
+ * ============================================================
+ * APP COMPONENT
+ * ============================================================
+ *
+ * Componente principal da aplicação.
+ *
+ * Mantém o estado global do combate e coordena os componentes
+ * filhos através de props e callbacks.
+ * ============================================================
+ */
 function App() {
 
   /*
    * ============================================================
-   * STATE
+   * STATE — ESTADO DA APLICAÇÃO
    * ============================================================
    */
 
@@ -232,7 +269,9 @@ function App() {
   const [
     helpOpen,
     setHelpOpen
-  ] = useState(true);
+  ] = useState(() => {
+    return localStorage.getItem("rpg-guide-seen") !== "true";
+  });
 
   /*
    * Novo:
@@ -258,7 +297,7 @@ function App() {
 
   /*
    * ============================================================
-   * LOAD CREATURES
+   * LIBRARY — CARREGAR CRIATURAS
    * ============================================================
    */
 
@@ -503,7 +542,7 @@ function App() {
 
   /*
    * ============================================================
-   * CURRENT CREATURE
+   * TURN SYSTEM — CRIATURA ATUAL
    * ============================================================
    */
 
@@ -519,7 +558,7 @@ function App() {
 
   /*
    * ============================================================
-   * TURN SYSTEM
+   * TURN SYSTEM — GESTÃO DE TURNOS
    * ============================================================
    */
 
@@ -592,7 +631,7 @@ function App() {
 
   /*
    * ============================================================
-   * AI
+   * COMBAT — ESCOLHA DE AÇÃO / AI
    * ============================================================
    */
 
@@ -663,7 +702,7 @@ function App() {
 
   /*
    * ============================================================
-   * ATTACK
+   * COMBAT — ATAQUE
    * ============================================================
    */
 
@@ -828,7 +867,7 @@ function App() {
 
   /*
    * ============================================================
-   * MOVE
+   * COMBAT — MOVIMENTO
    * ============================================================
    */
 
@@ -845,7 +884,7 @@ function App() {
 
   /*
    * ============================================================
-   * DAMAGE
+   * COMBAT — APLICAÇÃO DE DANO
    * ============================================================
    */
 
@@ -891,7 +930,7 @@ function App() {
 
   /*
    * ============================================================
-   * ADD CREATURE TO COMBAT
+   * ENCOUNTER — ADICIONAR CRIATURA
    * ============================================================
    */
 
@@ -943,7 +982,7 @@ function App() {
 
   /*
    * ============================================================
-   * RANDOM ENCOUNTER
+   * ENCOUNTER — ENCONTRO ALEATÓRIO
    * ============================================================
    */
 
@@ -1030,7 +1069,7 @@ function App() {
 
   /*
    * ============================================================
-   * REMOVE CREATURE
+   * ENCOUNTER — REMOVER CRIATURA
    * ============================================================
    */
 
@@ -1110,7 +1149,7 @@ function App() {
 
   /*
    * ============================================================
-   * RESET
+   * GAME — NOVO JOGO / RESET
    * ============================================================
    */
 
@@ -1145,7 +1184,7 @@ function App() {
 
   /*
    * ============================================================
-   * SAVE CUSTOM CREATURE
+   * LIBRARY — GUARDAR CRIATURA PERSONALIZADA
    * ============================================================
    */
 
@@ -1831,9 +1870,10 @@ function App() {
 
       {helpOpen && (
         <HelpModal
-          onClose={() =>
+          onClose={() => {
+            localStorage.setItem("rpg-guide-seen", "true")
             setHelpOpen(false)
-          }
+          }}
         />
       )}
 
@@ -1853,6 +1893,21 @@ function App() {
  * alterar a estrutura existente dos teus componentes.
  */
 
+/*
+ * ============================================================
+ * CREATE CREATURE MODAL
+ * ============================================================
+ *
+ * Editor responsável por criar uma nova CreatureTemplate.
+ *
+ * Atualmente este componente encontra-se neste ficheiro.
+ * Pode ser movido para:
+ *
+ *   ./components/CreateCreatureModal.tsx
+ *
+ * numa futura refatoração, sem alterar a lógica.
+ * ============================================================
+ */
 interface CreateCreatureModalProps {
 
   onSave:
