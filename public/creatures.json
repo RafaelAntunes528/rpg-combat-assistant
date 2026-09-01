@@ -26,6 +26,9 @@
         "stat": "dex",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid"
     ]
   },
   {
@@ -62,6 +65,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid"
     ]
   },
   {
@@ -91,6 +97,10 @@
         "stat": "dex",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Ranged"
     ]
   },
   {
@@ -131,6 +141,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Spellcaster"
     ]
   },
   {
@@ -164,6 +178,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Assassin"
     ]
   },
   {
@@ -204,6 +222,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Boss"
     ]
   },
   {
@@ -240,6 +262,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid"
     ]
   },
   {
@@ -276,6 +301,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid"
     ]
   },
   {
@@ -312,6 +340,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid"
     ]
   },
   {
@@ -345,6 +376,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Berserker"
     ]
   },
   {
@@ -385,6 +420,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Boss"
     ]
   },
   {
@@ -414,6 +453,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -443,6 +485,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -472,6 +517,10 @@
         "stat": "dex",
         "extra": null
       }
+    ],
+    "tags": [
+      "Undead",
+      "Ranged"
     ]
   },
   {
@@ -505,6 +554,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Spellcaster"
     ]
   },
   {
@@ -538,6 +591,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -571,6 +627,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Boss"
     ]
   },
   {
@@ -600,6 +660,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -633,6 +696,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -673,6 +739,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -706,6 +775,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Ranged"
     ]
   },
   {
@@ -739,6 +812,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -772,6 +848,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -805,6 +884,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -838,6 +920,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -878,6 +963,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -918,6 +1006,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Boss"
     ]
   },
   {
@@ -951,6 +1043,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -995,6 +1090,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -1039,6 +1137,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Boss"
     ]
   },
   {
@@ -1079,6 +1181,11 @@
         "stat": "int",
         "extra": null
       }
+    ],
+    "tags": [
+      "Undead",
+      "Boss",
+      "Spellcaster"
     ]
   },
   {
@@ -1112,6 +1219,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Boss"
     ]
   },
   {
@@ -1156,6 +1267,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Boss",
+      "Spellcaster"
     ]
   },
   {
@@ -1189,6 +1305,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Forest"
     ]
   },
   {
@@ -1222,6 +1342,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Forest"
     ]
   },
   {
@@ -1258,6 +1382,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Beast",
+      "Forest"
     ]
   },
   {
@@ -1298,6 +1426,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Forest"
     ]
   },
   {
@@ -1331,6 +1463,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Forest"
     ]
   },
   {
@@ -1364,6 +1500,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Forest"
     ]
   },
   {
@@ -1404,6 +1544,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Beast",
+      "Aquatic"
     ]
   },
   {
@@ -1448,6 +1592,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Forest",
+      "Venomous"
     ]
   },
   {
@@ -1488,6 +1637,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Venomous"
     ]
   },
   {
@@ -1524,6 +1677,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Forest"
     ]
   },
   {
@@ -1557,6 +1714,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -1601,6 +1761,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Venomous"
     ]
   },
   {
@@ -1641,6 +1805,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -1685,6 +1852,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Venomous"
     ]
   },
   {
@@ -1721,6 +1892,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -1761,6 +1935,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Boss"
     ]
   },
   {
@@ -1805,6 +1983,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Boss",
+      "Fiend"
     ]
   },
   {
@@ -1852,6 +2035,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -1892,6 +2078,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Flying"
     ]
   },
   {
@@ -1932,6 +2122,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fey",
+      "Aquatic",
+      "Spellcaster"
     ]
   },
   {
@@ -1968,6 +2163,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Forest"
     ]
   },
   {
@@ -2008,6 +2207,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Humanoid",
+      "Fey",
+      "Forest"
     ]
   },
   {
@@ -2044,6 +2248,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Celestial",
+      "Flying"
     ]
   },
   {
@@ -2084,6 +2292,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Flying"
     ]
   },
   {
@@ -2131,6 +2343,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Flying"
     ]
   },
   {
@@ -2175,6 +2391,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -2208,6 +2427,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -2248,6 +2470,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -2284,6 +2509,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Giant",
+      "Arctic"
     ]
   },
   {
@@ -2324,6 +2553,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Giant",
+      "Arctic"
     ]
   },
   {
@@ -2364,6 +2597,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Giant",
+      "Fire"
     ]
   },
   {
@@ -2404,6 +2641,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Celestial",
+      "Flying"
     ]
   },
   {
@@ -2444,6 +2685,11 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Mythic",
+      "Boss",
+      "Arctic"
     ]
   },
   {
@@ -2488,6 +2734,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Mythic",
+      "Boss",
+      "Aquatic"
     ]
   },
   {
@@ -2528,6 +2779,11 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Mythic",
+      "Boss",
+      "Aquatic"
     ]
   },
   {
@@ -2583,6 +2839,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Mythic",
+      "Boss",
+      "Aquatic"
     ]
   },
   {
@@ -2627,6 +2888,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Dragon",
+      "Flying"
     ]
   },
   {
@@ -2674,6 +2939,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Dragon",
+      "Flying"
     ]
   },
   {
@@ -2725,6 +2994,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Dragon",
+      "Flying",
+      "Boss"
     ]
   },
   {
@@ -2776,6 +3050,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Dragon",
+      "Flying",
+      "Boss"
     ]
   },
   {
@@ -2820,6 +3099,12 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Dragon",
+      "Flying",
+      "Arctic",
+      "Ice"
     ]
   },
   {
@@ -2871,6 +3156,12 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead",
+      "Dragon",
+      "Flying",
+      "Boss"
     ]
   },
   {
@@ -2915,6 +3206,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast",
+      "Fiend",
+      "Fire"
     ]
   },
   {
@@ -2948,6 +3244,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fiend"
     ]
   },
   {
@@ -2988,6 +3287,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fiend",
+      "Spellcaster"
     ]
   },
   {
@@ -3028,6 +3331,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fiend",
+      "Spellcaster"
     ]
   },
   {
@@ -3083,6 +3390,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fiend",
+      "Boss",
+      "Fire"
     ]
   },
   {
@@ -3116,6 +3428,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Fire"
     ]
   },
   {
@@ -3149,6 +3465,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Aquatic"
     ]
   },
   {
@@ -3189,6 +3509,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Earth"
     ]
   },
   {
@@ -3222,6 +3546,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Air"
     ]
   },
   {
@@ -3255,6 +3583,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Arctic",
+      "Ice"
     ]
   },
   {
@@ -3288,6 +3621,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Fire"
     ]
   },
   {
@@ -3332,6 +3669,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Air"
     ]
   },
   {
@@ -3372,6 +3713,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fey",
+      "Plant",
+      "Forest"
     ]
   },
   {
@@ -3416,6 +3762,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fey",
+      "Plant",
+      "Forest"
     ]
   },
   {
@@ -3456,6 +3807,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fey",
+      "Forest",
+      "Flying"
     ]
   },
   {
@@ -3500,6 +3856,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -3544,6 +3903,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Undead"
     ]
   },
   {
@@ -3584,6 +3946,11 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Fey",
+      "Aquatic"
     ]
   },
   {
@@ -3617,6 +3984,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Beast"
     ]
   },
   {
@@ -3657,6 +4027,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Fey",
+      "Aquatic"
     ]
   },
   {
@@ -3693,6 +4067,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid"
     ]
   },
   {
@@ -3729,6 +4106,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Humanoid"
     ]
   },
   {
@@ -3765,6 +4145,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Giant",
+      "Mountain"
     ]
   },
   {
@@ -3809,6 +4193,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Giant",
+      "Fire",
+      "Boss"
     ]
   },
   {
@@ -3856,6 +4245,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Boss"
     ]
   },
   {
@@ -3918,6 +4311,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity",
+      "Boss"
     ]
   },
   {
@@ -3958,6 +4355,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Aberration",
+      "Spellcaster"
     ]
   },
   {
@@ -4002,6 +4403,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Aberration",
+      "Spellcaster"
     ]
   },
   {
@@ -4042,6 +4447,11 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Aberration",
+      "Aquatic",
+      "Boss"
     ]
   },
   {
@@ -4086,6 +4496,9 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -4126,6 +4539,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Monstrosity"
     ]
   },
   {
@@ -4170,6 +4586,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Aberration",
+      "Boss"
     ]
   },
   {
@@ -4206,6 +4626,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Construct"
     ]
   },
   {
@@ -4246,6 +4669,10 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Construct",
+      "Earth"
     ]
   },
   {
@@ -4297,6 +4724,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Celestial",
+      "Flying",
+      "Fire"
     ]
   },
   {
@@ -4337,6 +4769,9 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Celestial"
     ]
   },
   {
@@ -4366,6 +4801,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Celestial",
+      "Flying"
     ]
   },
   {
@@ -4406,6 +4845,11 @@
           "multiplier": 1
         }
       }
+    ],
+    "tags": [
+      "Elemental",
+      "Air",
+      "Spellcaster"
     ]
   },
   {
@@ -4446,6 +4890,10 @@
         "stat": "str",
         "extra": null
       }
+    ],
+    "tags": [
+      "Undead",
+      "Boss"
     ]
   }
 ]

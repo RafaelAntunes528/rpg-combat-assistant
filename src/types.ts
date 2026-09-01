@@ -47,6 +47,7 @@ export interface CreatureTemplate {
   mov: number;
   stats: Stats;
   weapons: Weapon[];
+  tags?: string[];
 }
 
 export interface Creature extends CreatureTemplate {

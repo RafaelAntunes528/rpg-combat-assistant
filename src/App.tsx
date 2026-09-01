@@ -987,16 +987,30 @@ function App() {
    */
 
   function generateRandomEncounter(
-    amount: number
+    amount: number,
+    selectedTags: string[]
   ) {
 
-    if (
-      templates.length === 0
-    ) {
+    const filteredTemplates =
+        selectedTags.length === 0
+          ? templates
+          : templates.filter(
+              template =>
+                template.tags?.some(
+                  tag =>
+                    selectedTags.includes(tag)
+                )
+            );
 
-      return;
+      if (
+        filteredTemplates.length === 0
+      ) {
+        alert(
+          "Não existem criaturas com as tags selecionadas."
+        );
 
-    }
+        return;
+      }
 
 
     const counters:
@@ -1014,10 +1028,10 @@ function App() {
     ) {
 
       const template =
-        templates[
+        filteredTemplates[
           Math.floor(
             Math.random() *
-            templates.length
+            filteredTemplates.length
           )
         ];
 
@@ -1954,6 +1968,11 @@ function CreateCreatureModal({
     setMov
   ] = useState("6");
 
+  const [
+    tags,
+    setTags
+  ] = useState<string[]>([]);
+
 
   /*
    * ------------------------------------------------------------
@@ -2246,8 +2265,9 @@ function CreateCreatureModal({
 
       stats,
 
-      weapons
+      weapons,
 
+      tags
     };
 
 
@@ -2255,6 +2275,43 @@ function CreateCreatureModal({
       creature
     );
 
+  }
+
+  /*
+   * ============================================================
+   * TAGS
+   * ============================================================
+   */
+
+   const availableTags = [
+     "Beast",
+     "Humanoid",
+     "Undead",
+     "Construct",
+     "Monstrosity",
+     "Dragon",
+     "Fiend",
+     "Celestial",
+     "Elemental",
+     "Goblinoid",
+     "Boss",
+     "Large",
+     "Small",
+     "Forest",
+     "Aquatic"
+   ];
+
+  function toggleTag(tag: string) {
+    setTags(current =>
+      current.includes(tag)
+        ? current.filter(
+            existing => existing !== tag
+          )
+        : [
+            ...current,
+            tag
+          ]
+    );
   }
 
 
@@ -2430,6 +2487,37 @@ function CreateCreatureModal({
               />
 
             </label>
+
+            <div className="create-creature-tags">
+
+              <label>
+                Tags
+              </label>
+
+              <div className="tag-selector">
+
+                {availableTags.map(tag => (
+
+                  <button
+                    key={tag}
+                    type="button"
+                    className={
+                      tags.includes(tag)
+                        ? "tag-option active"
+                        : "tag-option"
+                    }
+                    onClick={() =>
+                      toggleTag(tag)
+                    }
+                  >
+                    {tag}
+                  </button>
+
+                ))}
+
+              </div>
+
+            </div>
 
           </div>
 

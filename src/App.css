@@ -3219,3 +3219,319 @@ input {
   }
 
 }
+
+/* ============================================================
+   RANDOM ENCOUNTER
+   ============================================================ */
+
+.random-preview {
+  margin-top: 18px;
+
+  padding: 14px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background:
+    #121419;
+}
+
+.random-preview-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.random-preview-header > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.random-preview-header span {
+  color: #888;
+
+  font-size: 11px;
+}
+
+.random-preview-header strong {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+  height: 22px;
+
+  padding: 0 7px;
+
+  border-radius: 6px;
+
+  background:
+    rgba(200, 155, 60, 0.14);
+
+  color: #e0c47d;
+
+  font-size: 11px;
+}
+
+.random-preview-header small {
+  color: #666;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   CREATURE LIST
+   ============================================================ */
+
+.random-preview-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.preview-creature {
+  display: inline-flex;
+
+  align-items: center;
+
+  max-width: 100%;
+
+  padding:
+    5px
+    8px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  border-radius: 5px;
+
+  background:
+    #292d36;
+
+  color: #bbb;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   EMPTY
+   ============================================================ */
+
+.random-preview-empty {
+  padding: 12px;
+
+  border:
+    1px dashed
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 7px;
+
+  color: #666;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   SHOW MORE
+   ============================================================ */
+
+.random-preview-toggle {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding:
+    7px
+    9px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color: #888;
+
+  font-size: 10px;
+}
+
+.random-preview-toggle:hover {
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: #ddd;
+}
+
+
+/* ============================================================
+   FILTER
+   ============================================================ */
+
+.random-filter {
+  margin-top: 18px;
+
+  padding: 14px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.random-filter-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.random-filter-header > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.random-filter-header strong {
+  font-size: 12px;
+}
+
+.random-filter-header span {
+  color: #777;
+
+  font-size: 10px;
+}
+
+.random-filter-clear {
+  padding:
+    5px
+    8px;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  color: #999;
+
+  font-size: 10px;
+}
+
+.random-filter-clear:hover {
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  color: white;
+}
+
+.random-filter-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.random-tag {
+  padding:
+    6px
+    9px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color: #888;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.random-tag:hover {
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color: #ddd;
+}
+
+.random-tag.active {
+  border-color:
+    #75613c;
+
+  background:
+    rgba(200, 155, 60, 0.14);
+
+  color:
+    #e0c47d;
+}
+
+
+/* ============================================================
+   GENERATE
+   ============================================================ */
+
+.random-generate {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding:
+    12px;
+
+  background:
+    #634b9b;
+
+  color:
+    white;
+
+  font-weight:
+    bold;
+}
+
+.random-generate:hover:not(:disabled) {
+  background:
+    #765bb3;
+}
+
+.random-generate:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
